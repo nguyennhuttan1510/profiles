@@ -9,11 +9,11 @@ const Footer = (props) => {
           <div className="col-md-6">
             <div className="row">
               <div className="col-md-8">
-                <h2 className="footer-heading mb-4">About Us</h2>
+                <h2 className="footer-heading mb-4">About Me</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                  facere laudantium magnam voluptatum autem. Amet aliquid
-                  nesciunt veritatis aliquam.
+                  I am a continuing programmable programn and a freelancer for
+                  many projects, in addition I also receive website design for
+                  clients
                 </p>
               </div>
               <div className="col-md-4 ml-auto">

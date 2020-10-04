@@ -3,12 +3,17 @@ import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
 
 const RouteWithLayout = (props) => {
-  const { layout: Layout, component: Component, ...rest } = props;
+  const {
+    layout: Layout,
+    component: Component,
+    conditionShowLayout,
+    ...rest
+  } = props;
   return (
     <Route
       {...rest}
       render={(matchProps) => (
-        <Layout {...matchProps}>
+        <Layout conditionShowLayout={conditionShowLayout} {...matchProps}>
           <Component {...matchProps} />
         </Layout>
       )}
@@ -17,5 +22,7 @@ const RouteWithLayout = (props) => {
 };
 
 RouteWithLayout.propTypes = {};
-
+// RouteWithLayout.defaultProps = {
+//   conditionShowLayout: null,
+// };
 export default RouteWithLayout;

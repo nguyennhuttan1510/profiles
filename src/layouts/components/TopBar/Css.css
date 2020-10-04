@@ -1,0 +1,25 @@
+.animation {
+  position: fixed;
+  z-index: 1000;
+  transition: top 0.3s;
+  width: -webkit-fill-available;
+  left: 0px;
+}
+.text-menu .nav-item .nav-link,
+.navbar-light .navbar-brand {
+  font-size: x-large;
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  transition: color 0.2s;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ff800b;
+}
+.bg-topic {
+  background-color: #222222;
+}
+.navbar-nav .active > .nav-link {
+  color: #ff800b !important;
+}

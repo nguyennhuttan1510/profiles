@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Footer, TopBar } from "../components";
+import { BannerHeader } from "../../views/components";
 
 const Main = (props) => {
-  const { children } = props;
+  const { children, conditionShowLayout } = props;
   return (
     <div>
       <div id="overlayer" />
@@ -12,7 +13,8 @@ const Main = (props) => {
           <span className="sr-only">Loading...</span>
         </div>
       </div>
-      <TopBar />
+      <TopBar showMenuForManager={conditionShowLayout.showMenuForManager} />
+      {conditionShowLayout.noBannerHeader ? null : <BannerHeader />}
       {children}
       <Footer />
     </div>
@@ -20,5 +22,11 @@ const Main = (props) => {
 };
 
 Main.propTypes = {};
+Main.defaultProps = {
+  conditionShowLayout: {
+    showMenuForManager: false,
+    noBannerHeader: false,
+  },
+};
 
 export default Main;

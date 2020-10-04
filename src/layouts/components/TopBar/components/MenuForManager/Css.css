@@ -1,0 +1,12 @@
+.menu-child {
+  position: absolute;
+  left: 425px;
+}
+.display {
+  display: none;
+  height: 110px;
+  transition: display 5s;
+}
+.hor:hover .display {
+  display: flex;
+}
