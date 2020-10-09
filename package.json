@@ -2,7 +2,7 @@
   "name": "profile-nhut-tan",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nguyennhuttan1510.github.io/profile",
+  "homepage": "https://nguyennhuttan1510.github.io/profile/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@material-ui/core": "^4.11.0",

@@ -6,7 +6,7 @@ const BannerHeader = (props) => {
     <div className="owl-carousel slide-one-item">
       <div
         className="site-section-cover overlay img-bg-section"
-        style={{ backgroundImage: 'url("images/hero_3.jpg")' }}
+        style={{ backgroundImage: 'url("./images/hero_3.jpg")' }}
       >
         <div className="container">
           <div className="row align-items-center justify-content-center text-center">
@@ -41,7 +41,7 @@ const BannerHeader = (props) => {
       </div>
       <div
         className="site-section-cover overlay img-bg-section"
-        style={{ backgroundImage: 'url("images/hero_2.jpg")' }}
+        style={{ backgroundImage: 'url("./images/hero_2.jpg")' }}
       >
         <div className="container">
           <div className="row align-items-center justify-content-center text-center">

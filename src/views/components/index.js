@@ -1,4 +1,3 @@
-export { default as BannerHeader } from "./BannerHeader";
 export { default as Service } from "./Service";
 export { default as MyBest } from "./MyBest";
 export { default as MyExperience } from "./MyExperience";

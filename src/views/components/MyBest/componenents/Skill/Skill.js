@@ -9,7 +9,7 @@ const Skill = (props) => {
         <div className="row d-flex no-gutters align-items-stretch">
           <div
             className="col-12 col-lg-6 block__73422"
-            style={{ backgroundImage: 'url("images/img_1.jpg")' }}
+            style={{ backgroundImage: 'url('+ process.env.PUBLIC_URL + '/images/img_1.jpg)' }}
             data-aos="fade-right"
             data-aos-delay
           ></div>

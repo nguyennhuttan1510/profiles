@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Footer, TopBar } from "../components";
-import { BannerHeader } from "../../views/components";
+import { BannerHeader } from "../components";
 
 const Main = (props) => {
   const { children, conditionShowLayout } = props;

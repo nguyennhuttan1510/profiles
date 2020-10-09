@@ -46,7 +46,7 @@ const Service = (props) => {
                 <div className="icon mb-3">
                   <img
                     style={{ width: "45%" }}
-                    src={"images/" + value.image + ".png"}
+                    src={process.env.PUBLIC_URL + "/images/"+ value.image +".png"}
                     alt=""
                   />
                 </div>

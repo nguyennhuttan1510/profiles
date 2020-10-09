@@ -85,7 +85,7 @@ const ConfirmService = (props) => {
                   <div className="col-lg-5">
                     <img
                       style={{ width: "70%" }}
-                      src={"/images/" + value.image + ".png"}
+                      src={ process.env.PUBLIC_URL+"/images/" + value.image + ".png"}
                       alt=""
                     />
                   </div>

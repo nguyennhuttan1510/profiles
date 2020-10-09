@@ -24,7 +24,7 @@ const TopBar = (props) => {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
               <NavLink to="/login">
                 <span className="navbar-brand text-menu">
-                  <img src="/images/logo.png" className="img-fluid " alt="" />
+                  <img src={process.env.PUBLIC_URL +"/images/logo.png"} className="img-fluid " alt="" style={{maxWidth:"17%"}}/>
                 </span>
               </NavLink>
 

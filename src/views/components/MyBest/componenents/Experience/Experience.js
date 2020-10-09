@@ -9,7 +9,7 @@ const Experience = (props) => {
         <div className="row d-flex no-gutters align-items-stretch">
           <div
             className="col-12 col-lg-6 block__73422 order-lg-2"
-            style={{ backgroundImage: 'url("images/img_2.jpg")' }}
+            style={{ backgroundImage: 'url('+ process.env.PUBLIC_URL + '/images/img_2.jpg)' }}
             data-aos="fade-left"
             data-aos-delay
           ></div>

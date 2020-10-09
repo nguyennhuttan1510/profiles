@@ -14,7 +14,7 @@ const BannerExperience = (props) => {
             <span className="icon">
               <span className="icon-play" />
             </span>
-            <img src="images/hero_2.jpg" alt="Image" className="img-fluid" />
+            <img src={process.env.PUBLIC_URL + "/images/hero_2.jpg" } alt="banner" className="img-fluid" />
           </a>
         </figure>
       </div>
