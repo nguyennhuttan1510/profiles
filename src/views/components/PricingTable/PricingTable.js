@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import * as firebase from "firebase";
+import { NavLink } from "react-router-dom";
 
 const PricingTable = (props) => {
   const [price, setPrice] = useState([]);
   useEffect(() => {
     const connectData = firebase.database().ref("pricetable");
     connectData.on("value", (data) => {
-      console.log(data.val());
       const arr = [];
       data.forEach((e) => {
         arr.push({
@@ -15,12 +15,12 @@ const PricingTable = (props) => {
           title: e.val().title,
           price: e.val().price,
           list: e.val().list,
+          deplay: e.val().deplay,
         });
       });
       setPrice(arr);
     });
   }, []);
-  console.log(price);
   return (
     <section className="site-section" id="pricing-section">
       <div className="container">
@@ -39,6 +39,7 @@ const PricingTable = (props) => {
           {price.map((value) => {
             return (
               <div
+                key={value.id}
                 className="col-md-6 mb-4 mb-lg-0 col-lg-4"
                 data-aos="fade-up"
                 data-aos-delay={value.deplay}
@@ -57,16 +58,21 @@ const PricingTable = (props) => {
                   </div>
                   <ul
                     className="list-unstyled ul-check success mb-5"
-                    style={{ minHeight: "620px" }}
+                    style={{ minHeight: "420px" }}
                   >
                     {value.list.map((index, key) => {
-                      return <li>{index}</li>;
+                      return <li key={key}>{index}</li>;
                     })}
                   </ul>
                   <p className="text-center">
-                    <a href="#" className="btn btn-secondary btn-md">
-                      Buy Now
-                    </a>
+                    <NavLink to={"/confirm-service/pricetable/" + value.id}>
+                      <button
+                        type="button"
+                        className="btn btn-secondary btn-md"
+                      >
+                        Buy Now
+                      </button>
+                    </NavLink>
                   </p>
                 </div>
               </div>

@@ -22,11 +22,6 @@ const TagExperience = (props) => {
     });
   };
 
-  // const handleClickExperience = () => {
-  //   const connectDataExperience = firebase.database().ref("mybest/experience");
-  //   connectDataExperience.child(id).set(pushExperience);
-  // };
-
   const handleDefaultStateExperience = (title, animation, color, icon) => {
     const objectSkill = {
       title: title,

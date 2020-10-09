@@ -82,7 +82,6 @@ const Contact = (props) => {
                 <div className="col-md-12">
                   <textarea
                     name="content"
-                    id
                     className="form-control"
                     placeholder="Write your message."
                     cols={30}
@@ -118,12 +117,6 @@ const Contact = (props) => {
             <p>
               Address: Miếu Gò Xoài Street, Bình Hưng Hòa A Ward, Bình Tân
               District, Hồ Chí Minh City, Việt Nam Country
-            </p>
-
-            <p>
-              <a href="#" className="btn btn-primary text-white">
-                Get Started
-              </a>
             </p>
           </div>
         </div>

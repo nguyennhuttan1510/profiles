@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import * as firebase from "firebase";
+import { NavLink } from "react-router-dom";
 
 const Service = (props) => {
   const [service, setService] = useState([]);
   useEffect(() => {
     const connectData = firebase.database().ref("services");
     connectData.on("value", (data) => {
-      console.log(data.val());
       const arr = [];
       data.forEach((e) => {
         arr.push({
@@ -38,6 +37,7 @@ const Service = (props) => {
         <div className="row">
           {service.map((value) => (
             <div
+              key={value.id}
               className="col-md-6 col-lg-4 mb-4"
               data-aos="fade-up"
               data-aos-delay={value.deplay}
@@ -52,7 +52,12 @@ const Service = (props) => {
                 </div>
 
                 <h3 className="mb-3 text-white">{value.title}</h3>
-                {value.content}
+                <p>{value.content}</p>
+                <NavLink to={"/confirm-service/services/" + value.id}>
+                  <button type="button" className="btn btn-info">
+                    Chi tiết
+                  </button>
+                </NavLink>
               </div>
             </div>
           ))}

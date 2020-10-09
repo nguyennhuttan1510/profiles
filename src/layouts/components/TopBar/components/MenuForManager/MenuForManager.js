@@ -7,9 +7,9 @@ const MenuForManager = (props) => {
     <>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0 text-menu">
         <li className="nav-item active">
-          <a href="#">
+          <NavLink to="/service-management">
             <span className="nav-link">Service</span>
-          </a>
+          </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/contact-management">
@@ -17,7 +17,10 @@ const MenuForManager = (props) => {
           </NavLink>
         </li>
         <li className="nav-item hor">
-          <NavLink to="/setting-management">
+          {/* <a className="nav-link" href="#">
+            Setting
+          </a> */}
+          <NavLink to="/setting-management/MyBest">
             <span className="nav-link">Setting</span>
           </NavLink>
           <ul className="nav menu-child display">

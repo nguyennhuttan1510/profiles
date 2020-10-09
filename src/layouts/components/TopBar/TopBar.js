@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import "./Css.css";
 import MenuForManager from "./components/MenuForManager/MenuForManager";
@@ -23,9 +22,12 @@ const TopBar = (props) => {
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a className="navbar-brand text-menu" href="#">
-                Hidden brand
-              </a>
+              <NavLink to="/login">
+                <span className="navbar-brand text-menu">
+                  <img src="/images/logo.png" className="img-fluid " alt="" />
+                </span>
+              </NavLink>
+
               {showMenuForManager ? <MenuForManager /> : <MenuForViewers />}
             </div>
           </nav>

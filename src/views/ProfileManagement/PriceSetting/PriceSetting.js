@@ -274,7 +274,7 @@ const PriceSetting = (props) => {
               <div className="modal-content">
                 <div className="modal-header border-bottom-0">
                   <h5 className="modal-title" id="exampleModalLabel">
-                    Create Account
+                    Change or Add content
                   </h5>
                   <button
                     type="button"
@@ -316,8 +316,6 @@ const PriceSetting = (props) => {
                         onClick={() => {
                           pushPrice.list.splice(idList, 1);
                           pushPrice.list.splice(idList, 0, listContent);
-                          console.log(pushPrice.list);
-
                           HandleSet(url, listContent, idList);
                         }}
                       >

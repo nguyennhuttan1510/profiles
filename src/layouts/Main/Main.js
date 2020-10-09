@@ -7,12 +7,6 @@ const Main = (props) => {
   const { children, conditionShowLayout } = props;
   return (
     <div>
-      <div id="overlayer" />
-      <div className="loader">
-        <div className="spinner-border text-primary" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </div>
       <TopBar showMenuForManager={conditionShowLayout.showMenuForManager} />
       {conditionShowLayout.noBannerHeader ? null : <BannerHeader />}
       {children}

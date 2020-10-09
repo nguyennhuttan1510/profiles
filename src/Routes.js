@@ -3,22 +3,37 @@ import PropTypes from "prop-types";
 import { Switch } from "react-router-dom";
 import { BusinessPage, HomePage } from "./views";
 import { Main } from "./layouts";
-import { RouteWithLayout } from "./components";
+import { RouteWithLayout, PrivateRoutes } from "./components";
 import {
   ContactMe,
   MyBestSetting,
   IndexSetting,
   PriceSetting,
   ServiceSetting,
+  ServiceManagement,
 } from "./views/ProfileManagement";
 import TimeLine from "./views/ProfileManagement/TimeLine/TimeLine";
+import { ConfirmService, LoginManager } from "./views/components";
+
 const Routes = (props) => {
   const conditionShowLayout = {
     noBannerHeader: true,
     showMenuForManager: true,
   };
+  const conditionShowLogin = {
+    noBannerHeader: true,
+    showMenuForManager: false,
+  };
   return (
     <Switch>
+      {/* Login */}
+      <RouteWithLayout
+        component={LoginManager}
+        exact
+        layout={Main}
+        path="/login"
+        conditionShowLayout={conditionShowLogin}
+      />
       {/* Viewers */}
       <RouteWithLayout
         component={HomePage}
@@ -32,7 +47,20 @@ const Routes = (props) => {
         layout={Main}
         path="/services"
       />
+      <RouteWithLayout
+        component={ConfirmService}
+        exact
+        layout={Main}
+        path="/confirm-service/:slug/:id"
+      />
       {/* moderator */}
+      <PrivateRoutes
+        component={ServiceManagement}
+        exact
+        layout={Main}
+        path="/service-management"
+        conditionShowLayout={conditionShowLayout}
+      />
       <RouteWithLayout
         component={ContactMe}
         exact
